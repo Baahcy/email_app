@@ -1,0 +1,31 @@
+[{
+    "name":"John Doe",
+    "dob": "19-09-1973",
+    "skills":["PHP","NodeJS","HTML"],
+    "contact":"123 459 678 0"
+},{
+    "name":"Sam Wise",
+    "dob": "19-09-1973",
+    "skills":["PHP","NodeJS","HTML"],
+    "contact":"123 459 678 0"
+},{
+    "name":"Kojo Koomson",
+    "dob": "19-09-1973",
+    "skills":["PHP","NodeJS","HTML"],
+    "contact":"123 459 678 0"
+},{
+    "name":"Kwame Dickson",
+    "dob": "19-09-1973",
+    "skills":[],
+    "contact":"123 459 678 0"
+},{
+    "name":"Kwame Menu",
+    "dob": "19-09-1973",
+    "skills":["PHP","NodeJS","HTML"],
+    "contact":"123 459 678 0"
+},{
+    "name":"Abi Mills",
+    "dob": "19-09-1973",
+    "skills":["PHP","NodeJS","HTML"],
+    "contact":"123 459 678 0"
+}]
