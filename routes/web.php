@@ -26,15 +26,11 @@ Route::get('/', 'ContactController@index');
 
 Route::post('/contactus/store', 'ContactController@store')->name('contactus-store');
 
-// Route::get('/send-mail', function () {
 
-//     Mail::to('journalist@example.com')->send(new SendEmail());
+Route::get('/anonymous', 'AnonymousController@index');
 
-//     return redirect('/')->with('success', 'Message sent successfully');
+Route::post('/anonymous/store', 'AnonymousController@store')->name('sendmail-store');
 
-// });
-
-// Route::get('/send-mail', 'ContactController@sendmail')->name('sendmail');
 
 
 

@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Contact;
-use App\Mail\SendEmail;
+use App\Anonymous;
+use App\Mail\TestMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
-class ContactController extends Controller
+class AnonymousController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return view('index');
+        return view('anonymous.index');
     }
 
     /**
@@ -37,25 +37,23 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,
+        $this->validate(
+            $request,
             [
-                'name' => 'required',
-                'email' => 'required|email',
                 'message' => 'required'
 
-            ]);
+            ]
+        );
 
-    	$contact = new Contact();
+        $anonymous = new Anonymous();
 
-    	$contact->name = $request->input('name');
-    	$contact->email = $request->input('email');
-    	$contact->message = $request->input('message');
+        $anonymous->message = $request->input('message');
+        // dd($anonymous);
 
-        $contact->save();
+        $anonymous->save();
 
-        Mail::to('journalist@example.com')->send(new SendEmail());
+        Mail::to('cbaah123@gmail.com')->send(new TestMail());
 
-    	return redirect('/')->with('success', 'Message sent successfully');
+        return redirect('/anonymous')->with('success', 'Anonymous Message sent successfully');
     }
-
 }
